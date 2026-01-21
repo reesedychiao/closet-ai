@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="flex bg-background items-center justify-between px-8 py-4">
+    <header className="flex bg-background items-center justify-between py-4">
       <div className="flex items-center">
         <img
           src="../../public/closet.png"
