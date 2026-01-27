@@ -1,16 +1,17 @@
-import Header from "./components/Header";
-import Chat from "./components/Chat";
-import CarouselSection from "./components/Carousel";
+import { Routes, Route } from "react-router-dom";
+import AppLayout from "./layouts/AppLayout";
+import Chat from "./pages/ChatPage";
+import Closet from "./pages/ClosetPage";
 
 function App() {
   return (
-    <div className="bg-background flex flex-col min-h-screen px-8">
-      <Header />
-      <div className="grid grid-cols-2 gap-4">
-        <Chat />
-        <CarouselSection />
-      </div>
-    </div>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route index element={<Chat />} />
+        <Route path="chat" element={<Chat />} />
+        <Route path="closet" element={<Closet />} />
+      </Route>
+    </Routes>
   );
 }
 

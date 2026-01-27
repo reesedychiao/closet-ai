@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="flex bg-background items-center justify-between py-4">
@@ -10,16 +12,18 @@ export default function Header() {
         <h1 className="text-xl text-text">Closet AI</h1>
       </div>
       <div className="flex items-center">
-        <a href="/chat">
-          <button className="text-text hover:bg-primary active:bg-accent py-2 px-4 rounded-lg m-2">
-            Chat
-          </button>
-        </a>
-        <a href="/closet">
-          <button className="text-text hover:bg-primary active:bg-accent py-2 px-4 rounded-lg m-2">
-            My Closet
-          </button>
-        </a>
+        <NavLink
+          to="/chat"
+          className="text-text hover:bg-primary active:bg-accent py-2 px-4 rounded-lg m-2"
+        >
+          Chat
+        </NavLink>
+        <NavLink
+          to="/closet"
+          className="text-text hover:bg-primary active:bg-accent py-2 px-4 rounded-lg m-2"
+        >
+          My Closet
+        </NavLink>
         <a href="/profile">
           <img
             src="../../public/user.png"

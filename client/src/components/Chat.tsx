@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Chat() {
+export default function ChatSection() {
   const examples = [
     "Do I already own a yellow dress?",
     "Should I invest in another cashmere sweater?",
